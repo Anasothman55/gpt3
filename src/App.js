@@ -5,7 +5,7 @@ import {Blog,Featurec,Footer,Header,Possibility,WhatGPT3} from './containers/ind
 const App = () => {
   return (
     <>
-      <Blog></Blog>
+      
     </>
   )
 }
