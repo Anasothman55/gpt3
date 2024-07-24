@@ -1,9 +1,11 @@
 import React from 'react'
+import { Article,Brand,Cta,Feature,Navbar } from './components/index.js'
+
 
 const App = () => {
   return (
     <>
-      <h1>App</h1>
+      <Article></Article>
     </>
   )
 }
