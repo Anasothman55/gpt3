@@ -29,7 +29,7 @@ const Navbar = () => {
   const cl = `gpt3__navbar-menu_conatiner ${toggleMenu ? (menuClosing ? "scale-down-hor-right" : "scale-up-hor-right") : ""}`
 
   return (
-    <div className='gpt3__navbar'>
+    <nav className='gpt3__navbar'>
       <div className='gpt3__navbar-links'>
         <div className='gpt3__navbar-links_logo'>
           <img src={logo} alt="logo" />
@@ -49,7 +49,7 @@ const Navbar = () => {
       }
       {(toggleMenu || menuClosing) && (
         <div className={cl}>
-          <div className='gpt3__navbar-menu_container-links'>
+          <div className='gpt3__navbar-menu_container-links' onClick={handleCloseMenu}>
             <Menu/>
             <div className='gpt3__navbar-menu_conatiner-links-sign'>
               <p>Sign in</p>
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
       )}
     </div>
-    </div>
+    </nav>
   )
 }
 
