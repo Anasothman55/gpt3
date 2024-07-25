@@ -5,6 +5,7 @@
   position: fixed;
   padding: 2rem 6rem;
   width: 100%;
+  z-index: 10;
 }
 
 .gpt3__navbar-links{

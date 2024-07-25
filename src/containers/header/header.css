@@ -1,5 +1,5 @@
 .gpt3__h{
-  
+  display: ruby-text;
 }
 
 .gpt3__header{
@@ -13,7 +13,22 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  
+  position: relative;
+  animation-duration: 0.5s;
+  animation-name: goright;
+  animation-timing-function: ease-in;
+  animation-delay: 0;
+  animation-fill-mode: both;
+}
+
+@keyframes goright{
+  from{right: 1000px;
+  opacity: 0;
+  }
+  to{right: 0;
+  opacity: 1;
+
+  }
 }
 
 .gpt3__header-content h1{
@@ -95,7 +110,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
+
 
 .gpt3__header-image img{
   object-fit: cover;
@@ -103,10 +120,43 @@
   height: 100%;
   max-width: 832.500px;
   max-height: 840.750px;
+  position: relative;
+  animation: goleft 0.5s ease-in forwards;
 }
 
-@media screen and (max-width: 1280px){
+@keyframes goleft {
+  from {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1540px){
+  @keyframes goleft{
+    from{left: 500px;
+    opacity: 0;
+    }
+    to{left: 0;
+    opacity: 1;
+    }
+  }
+  @keyframes goright{
+    from{right: 500px;
+    opacity: 0;
+    }
+    to{right: 0;
+    opacity: 1;
   
+    }
+  }
+  
+}
+@media screen and (max-width: 1280px){
+
 .gpt3__header-content h1{
   font-size: 55px;
   line-height: 66.55px;
